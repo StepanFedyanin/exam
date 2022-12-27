@@ -1,0 +1,80 @@
+@use '../App/ImportStyle.scss' as import;
+
+.main {
+    margin-top: 100px;
+    margin-bottom: 133px;
+
+    &__container {
+        @include import.container();
+    }
+}
+
+.main__title {
+    display: flex;
+    flex-direction: column;
+    max-width: 410px;
+
+    &--h {
+        margin-bottom: 10px;
+
+        .main__h--style {
+            @include import.OSBold(40px, #000000);
+
+        }
+    }
+
+    &--decription {
+        margin-top: 10px;
+
+        .main__decription--style {
+            @include import.OSRegular(16px, #555555);
+        }
+    }
+}
+
+.main__filter {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+
+    &--items {
+        display: flex;
+        width: 50%;
+        justify-content: space-between;
+    }
+
+    &--more {
+        position: relative;
+
+        .main__filter--btn {
+            .filter__btn--style {
+                @include import.OSRegular(16px, #3771C8);
+
+                &:hover {
+                    color: #82aceb;
+                }
+
+                &:active {
+                    color: #1960c9;
+                }
+            }
+        }
+
+        .main__filter--border {
+            position: absolute;
+            width: 100%;
+            height: 6px;
+            border: 1px solid #F9D15C;
+            border-radius: 280px;
+        }
+    }
+}
+
+.main__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}

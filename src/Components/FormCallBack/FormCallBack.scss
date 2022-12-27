@@ -1,0 +1,73 @@
+@use '../App/ImportStyle.scss' as import;
+
+.form {
+    &__container {
+        @include import.container();
+        background: #EAECEB;
+        border-radius: 16px;
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
+
+        .from__content {
+            padding-left: 74px;
+            width: 90%;
+        }
+
+        .from__cover {
+            width: 40%;
+        }
+    }
+}
+
+.form__title {
+    margin-bottom: 11px;
+
+    &--style {
+        @include import.OSBold(40px, #222222);
+    }
+}
+
+.form__description {
+    margin-bottom: 47px;
+
+    &--style {
+        @include import.OSRegular(16px, #555555);
+
+    }
+}
+
+.form__inputs {
+    background: #FFFFFF;
+    border-radius: 50px;
+    display: flex;
+    max-width: 500px;
+    justify-content: space-between;
+    align-items: center;
+
+    .form__input--email {
+        padding: 16px 24px;
+        width: 100%;
+
+        .form__email--style {
+            width: 100%;
+            @include import.OSRegular(14px, #555555);
+        }
+    }
+
+    .form__input--submit {
+        background: #3771C8;
+        border-radius: 50px;
+        padding: 16px 24px;
+        .form__submit--style {
+            @include import.OSBold(16px, #FFFFFF);
+        }
+        &:hover {
+            background: #4b93ff;
+        }
+
+        &:active {
+            background: #2979f0;
+        }
+    }
+}

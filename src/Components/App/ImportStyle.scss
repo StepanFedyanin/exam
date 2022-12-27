@@ -1,0 +1,23 @@
+@mixin container() {
+    // width: calc(100vw - 160px);
+    width: 1280px;
+    margin: 0 auto;
+}
+
+@mixin OSRegular($fz, $color) {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: $fz;
+    line-height: 1.5;
+    color: $color;
+}
+
+@mixin OSBold($fz, $color) {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: $fz;
+    line-height: 1.5;
+    color: $color;
+}

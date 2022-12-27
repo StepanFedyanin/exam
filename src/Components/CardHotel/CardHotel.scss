@@ -1,0 +1,76 @@
+@use '../App/ImportStyle.scss' as import;
+
+.card {
+    width: 33%;
+    border: 1px solid #E8E8E8;
+    border-radius: 16px;
+    max-width: 410px;
+    margin-bottom: 40px;
+
+    &__cover {
+        position: relative;
+
+        &--favorite {
+            position: absolute;
+            top: 17px;
+            right: 17px;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        padding: 23px 16px;
+
+        &--place {
+            margin-bottom: 8px;
+
+            .card__place--style {
+                @include import.OSRegular(12px, #24AB70);
+
+            }
+        }
+
+        &--hotel {
+            margin-bottom: 23px;
+
+            .card__hotel--style {
+                @include import.OSBold(24px, #222222);
+            }
+
+        }
+
+        &--more {
+            display: flex;
+            justify-content: flex-end;
+
+            .card__more--btn {
+                @include import.OSBold(14px, #FFFFFF);
+                background: #3771C8;
+                padding: 5px 15px;
+                border-radius: 4px;
+
+                &:hover {
+                    background: #4b93ff;
+                }
+
+                &:active {
+                    background: #2979f0;
+                }
+            }
+        }
+    }
+}
+
+.card__info--favorite {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+
+    .card__favorite--price {
+        .card__price--style {
+            @include import.OSRegular(16px, #222222);
+            opacity: 0.5;
+        }
+    }
+}

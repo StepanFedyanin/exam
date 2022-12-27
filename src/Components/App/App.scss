@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,800&display=swap');
+
 * {
 	padding: 0px;
 	margin: 0px;
@@ -71,7 +73,7 @@ img {
 
 img,
 svg {
-	max-width: 100%;
+	width: 100%;
 	height: auto;
 }
 
@@ -125,13 +127,16 @@ legend {
 }
 
 .wrapper {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	height: 100%;
 	min-height: 100vh;
+
 	main {
 		flex: 1 0 auto;
 	}
+
 	footer {
 		flex: 0 0 auto;
 	}
